@@ -1,10 +1,7 @@
-# Exp-6-SYNCHORNOUS-COUNTERS - UP COUNTER AND DOWN COUNTER 
-### AIM: 
-To implement 4 bit up and down counters and validate  functionality.
-### HARDWARE REQUIRED:  
-PC, Cyclone II , USB flasher
-### SOFTWARE REQUIRED:   
-Quartus prime
+# Exp-6-Synchornous-counters - up counter and down counter 
+### AIM: To implement 4 bit up and down counters and validate  functionality.
+### HARDWARE REQUIRED:  – PC, Cyclone II , USB flasher
+### SOFTWARE REQUIRED:   Quartus prime
 ### THEORY 
 
 ## UP COUNTER 
@@ -49,28 +46,31 @@ This type of counter is normally referred to as a Down Counter, (CTD). In a bina
 
 4-bit Count Down Counter
 ### Procedure
-```
-1.Create a new project in QuartusII software.
+1.Create a new project in QuartusII software. 
+
 2.Name the project as uc for upcounter and dc for down counter.
+
 3.Create a new verilog hdl file in the project file.
+
 4.Name the module as dc and uc for down counter and up counter.
+
 5.Within the module declare input and output variables.
+
 6.Create a loop using if-else with condition parameter as reset value.
+
 7.End the loop.
+
 8.End the module.
-```
 
 
 
 ### PROGRAM 
 ```
-/*
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
-Developed by: MAHESWARAN.K
-RegisterNumber: 212222110023
-*/
+Developed by: THANJIYAPPAN .K
+RegisterNumber:  212222240108
 ```
-#### UP COUNTER:
+### UP COUNTER:
 ```
 module Counters(clk,A);
 input clk;
@@ -83,10 +83,11 @@ begin
 	A[0]=A[0]^1;
 end
 endmodule
+
 ```
-#### DOWN COUNTER:
+### DOWN COUNTER:
 ```
-module dCounters(clk,A);
+module downCounters(clk,A);
 input clk;
 output reg [3:0]A;
 always@(posedge clk)
@@ -94,39 +95,58 @@ begin
 	A[3]=(((~A[0])&(~A[1])&(~A[2]))^A[3]);
 	A[2]=(((~A[0])&(~A[1]))^A[2]);
 	A[1]=(~A[0])^A[1];
-	A[0]=(~A[0])^1;
+	A[0]=1^A[0];
 end
 endmodule
 ```
 
-### RTL LOGIC UP COUNTER AND DOWN COUNTER  
-#### UP COUNTER:
-![image](https://github.com/ATHMAJ03/Exp-7-Synchornous-counters-/assets/118753139/87e978f7-3a69-429d-b103-97759ddcfaa3)
 
 
-#### DOWN COUNTER:
-![image](https://github.com/ATHMAJ03/Exp-7-Synchornous-counters-/assets/118753139/83caeda7-7ecf-4445-a2a4-4e7a1ff31b7a)
+
+
+### RTL LOGIC UP COUNTER AND DOWN COUNTER :
+### UP COUNTER
+![279409689-21a764f7-7623-4773-9c1a-5596fa793a0c](https://github.com/22009011/Exp-7-Synchornous-counters-/assets/118343461/4a1d6677-58af-45c4-9aca-c95a7a79563f)
+
+
+### DOWN COUNTER:
+![279407474-c50e6119-92fa-4325-8d4f-48bda2c535c5](https://github.com/22009011/Exp-7-Synchornous-counters-/assets/118343461/e4169730-a914-4cb6-be96-13c00b56e4ff)
+
 
 
 
 ### TIMING DIGRAMS FOR COUNTER  
-#### UP COUNTER
-![image](https://github.com/ATHMAJ03/Exp-7-Synchornous-counters-/assets/118753139/cf617a88-0d0c-4486-b5b7-85afb6e4eed8)
+### UP COUNTER:
+![279425738-32c085a6-28b6-471b-a0f6-f4eaf69998ee](https://github.com/22009011/Exp-7-Synchornous-counters-/assets/118343461/a416e65e-f7ea-477b-8c99-08899abbe01d)
 
 
-#### DOWN COUNTER
-![image](https://github.com/ATHMAJ03/Exp-7-Synchornous-counters-/assets/118753139/cd9c174e-2ad3-4a5e-8b21-a7218f621308)
+
+
+
+
+### DOWN COUNTER:
+![279425473-715ea572-9659-4786-a87d-e490376a0ffd](https://github.com/22009011/Exp-7-Synchornous-counters-/assets/118343461/fec6a97c-ad01-4932-badd-836380468b41)
+
+
+
+
+
+
 
 
 ### TRUTH TABLE 
-#### UP COUNTER
-![image](https://github.com/Jaiganesh235/Exp-6-Synchornous-counters-/assets/118657189/3bb80ba1-802f-4b29-9b05-e2883755bb61)
+### UP COUNTER:
+![277085989-3bb80ba1-802f-4b29-9b05-e2883755bb61](https://github.com/22009011/Exp-7-Synchornous-counters-/assets/118343461/e95a7fe5-558b-46f4-81a1-5bfcd115196c)
 
 
-#### DOWN COUNTER
-![image](https://github.com/Jaiganesh235/Exp-6-Synchornous-counters-/assets/118657189/26e364d2-d30e-48f8-9e46-5ceeb264fe4d)
+### DOWN COUNTER:
+![277085999-26e364d2-d30e-48f8-9e46-5ceeb264fe4d](https://github.com/22009011/Exp-7-Synchornous-counters-/assets/118343461/4ee5e704-8dc9-4cc2-9008-b96980b0321d)
 
 
 
-### RESULT
+
+
+
+
+### RESULTS 
 Thus Synchornous counters up counter and down counter circuit are studied and the truth table for different logic gates are verified.
